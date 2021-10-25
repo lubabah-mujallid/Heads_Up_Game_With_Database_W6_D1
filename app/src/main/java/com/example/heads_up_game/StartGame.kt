@@ -25,6 +25,9 @@ class StartGame : AppCompatActivity() {
         requestAPI()
 
         StartButton.setOnClickListener { startGame() }
+        var addButton = findViewById<Button>(R.id.addCelebButton)
+        addButton.setOnClickListener { addCeleb() }
+
 
     }
     private fun requestAPI() {
@@ -74,6 +77,12 @@ class StartGame : AppCompatActivity() {
         intent.putExtra("list", myList)
         startActivity(intent)
 
+    }
+
+    private fun addCeleb() {
+        Log.d("MAIN", "going to Add Celeb activity")
+        intent = Intent(applicationContext, AddCelebToLocalDataBase::class.java)
+        startActivity(intent)
     }
 
 

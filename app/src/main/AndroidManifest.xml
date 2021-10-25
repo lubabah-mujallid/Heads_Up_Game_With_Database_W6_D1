@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.heads_up_game">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -11,11 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Heads_Up_Game">
         <activity
+            android:name=".AddCelebToLocalDataBase"
+            android:exported="false" />
+        <activity
             android:name=".MainGame"
-            android:exported="true"
-            android:screenOrientation="fullSensor"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
-            />
+            android:exported="true"
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".StartGame"
             android:exported="true">
